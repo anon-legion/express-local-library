@@ -8,7 +8,7 @@ block content
       label(for='first_name') First Name:
       input#first_name.form-control(
         type='text',
-        placeholder='First name',
+        placeholder='Given name...',
         name='first_name',
         required='true',
         value=(author === undefined ? '' : author.first_name)
@@ -16,7 +16,7 @@ block content
       label(for='family_name') Family Name:
       input#family_name.form-control(
         type='text',
-        placeholder='Family name',
+        placeholder='Surname...',
         name='family_name',
         required='true',
         value=(author === undefined ? '' : author.family_name)
@@ -27,6 +27,12 @@ block content
         type='date',
         name='date_of_birth',
         value=(author === undefined ? '' : author.date_of_birth)
+      )
+      label(for='date_of_death') Date of death:
+      input#date_of_death.form-control(
+        type='date',
+        name='date_of_death',
+        value=(author === undefined ? '' : author.date_of_death)
       )
     button.btn.btn-primary(type='submit') Submit
   if errors
